@@ -1,0 +1,47 @@
+<%- include("../partials/header.ejs") %>
+    <h1 class="text-3xl text-black pb-6">Add Registrars</h1>
+    <div class="flex flex-wrap justify-center">
+        <div class="w-full lg:w-1/2 my-6 pr-0 lg:pr-2">
+            <p class="text-xl pb-6 flex items-center">
+                <i class="fas fa-list mr-3"></i> Add Past Registrars
+            </p>
+            <div class="leading-loose">
+                <form class="p-10 bg-white rounded shadow-xl" action="/regoff/admin/registrar" method="POST"
+                    enctype="multipart/form-data">
+                    <div class="mt-2">
+                        <label class="block text-sm text-gray-600" for="name">Name</label>
+                        <input class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded" id="name" type="text"
+							   name="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="mt-2">
+                        <label class="block text-sm text-gray-600" for="pic">Profile Image</label>
+                        <input class="w-full px-5 py-4 text-gray-700 bg-gray-200 rounded" type="file" id="pic"
+                            name="pic" placeholder="image url" required>
+                    </div>
+                    <div class="mt-2">
+                        <label class="block text-sm text-gray-600" for="post">Post</label>
+                        <input class="w-full px-5 py-4 text-gray-700 bg-gray-200 rounded" type="text" id="post"
+                            name="post" placeholder="post" required>
+                    </div>
+					<div class="mt-2">
+                        <label class="block text-sm text-gray-600" for="date">Date of Service</label>
+                        <input class="w-full px-5 py-4 text-gray-700 bg-gray-200 rounded" type="text" id="date"
+                            name="date" placeholder="DD-MM-YYYY" required>
+                    </div>
+                    <div class="mt-2">
+                        <label class="block text-sm text-gray-600" for="priority_number">Priority Number</label>
+                        <input class="w-full px-5 py-4 text-gray-700 bg-gray-200 rounded" type="number" id="priority"
+                            name="priority_number" placeholder="Priority Number" required>
+                    </div>
+                    <div class="mt-6">
+                        <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
+                            type="submit">Add</button>
+                    </div>
+                    <div class="mt-2">
+                        <a class="hover:text-blue-500" href="/regoff/admin/registrar">Go Back</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include("../partials/footer.ejs") %>

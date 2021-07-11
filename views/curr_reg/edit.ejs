@@ -1,0 +1,69 @@
+<%- include("../partials/header.ejs") %>
+
+    <h1 class="text-3xl text-black pb-6">Edit Registrars</h1>
+
+    <div class="flex flex-wrap justify-center">
+        <div class="w-full lg:w-1/2 my-6 pr-0 lg:pr-2">
+            <p class="text-xl pb-6 flex items-center">
+                <i class="fas fa-list mr-3"></i> Edit Current Registrar
+            </p>
+            <div class="leading-loose">
+                <form class="p-10 bg-white rounded shadow-xl"
+                    action="/regoff/admin/curr_reg/<%= curr_reg.id %>?_method=PUT" method="POST"
+                    enctype="multipart/form-data">
+                    <div class="mt-2">
+                        <label class="block text-sm text-gray-600" for="name">Full Name</label>
+                        <input class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded" id="name" type="text"
+                            name="name" value="<%= curr_reg.name %>" required>
+                    </div>
+                    <div class="mt-2">
+                        <label class="block text-sm text-gray-600" for="pic">Profile Image</label>
+                        <input class="w-full px-5 py-4 text-gray-700 bg-gray-200 rounded" type="file" id="pic"
+                            name="pic" placeholder="image url"></input>
+                    </div>
+                    <div class="mt-2">
+                        <label class="block text-sm text-gray-600" for="post">Post</label>
+                        <input class="w-full px-5 py-4 text-gray-700 bg-gray-200 rounded" type="text" id="post"
+                            name="post" value="<%= curr_reg.post %>" required></input>
+                    </div>
+					<div class="mt-2">
+                        <label class="block text-sm text-gray-600" for="date">Date</label>
+                        <input class="w-full px-5 py-4 text-gray-700 bg-gray-200 rounded" type="text" id="date"
+                            name="date" value="<%= curr_reg.date %>" required></input>
+                    </div>
+					<div class="mt-2">
+                        <label class="block text-sm text-gray-600" for="phone">Phone</label>
+                        <input class="w-full px-5 py-4 text-gray-700 bg-gray-200 rounded" type="text" id="phone"
+                            name="phone" value="<%= curr_reg.phone %>" required></input>
+                    </div>
+					<div class="mt-2">
+                        <label class="block text-sm text-gray-600" for="email">Email</label>
+                        <input class="w-full px-5 py-4 text-gray-700 bg-gray-200 rounded" type="text" id="email"
+                            name="email" value="<%= curr_reg.email %>" required></input>
+                    </div>
+					<div class="mt-2">
+                        <label class="block text-sm text-gray-600" for="description">Description</label>
+						<input class="form-textarea w-full px-5 py-4 text-gray-700 bg-gray-200 rounded" rows="3" placeholder="Description." type="text" id="description"
+                            name="description" value="<%= curr_reg.description %>" required></input>
+                        <!-- <input class="form-textarea w-full px-5 py-4 text-gray-700 bg-gray-200 rounded" type="text" id="description"
+                            name="description" value="" required></input> -->
+                    </div>
+					<div class="mt-2">
+                        <label class="block text-sm text-gray-600" for="priority_number">Priority Number</label>
+                        <input class="w-full px-5 py-4 text-gray-700 bg-gray-200 rounded" type="number" id="priority"
+                            name="priority_number" placeholder="Priority Number" required></input>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
+                            type="submit">Edit</button>
+                    </div>
+                    <div class="mt-2">
+                        <a class="hover:text-blue-500" href="/regoff/admin/curr_reg">Go Back</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include("../partials/footer.ejs") %>

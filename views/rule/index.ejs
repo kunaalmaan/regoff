@@ -1,0 +1,73 @@
+<%- include("../partials/header.ejs") %>
+    <h1 class="text-3xl text-black pb-6">Rules and Links</h1>
+    <div class="mt-6">
+        <a class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" href="/regoff/admin/rule/add">Add Rules or Links</a>
+
+        <form style="float: right;" action="/regoff/admin/rule/find/" method="POST" enctype="multipart/form-data">
+            
+            <input type="text" name="mySearch1" placeholder="Search ... ">
+            <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit"> Submit
+            </button>
+        </form>
+
+    </div>
+    <div class="w-auto mt-6 overflow-auto">
+        <div class="bg-white">
+            <table class="min-w-full bg-white">
+                <thead class="bg-gray-800 text-white">
+                    <tr>
+                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Date</th>
+                        <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Title</th>
+						<th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Description</th>
+                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Link</th>
+                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Edit</th>
+                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Delete</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700" id="myMenu">
+                    <%rules.forEach((rule,i)=>{ if(i%2){%>
+                        <tr class="bg-gray-200">
+                            <%}else{%>
+                        <tr>
+                            <%}%>
+                                <td class="text-left py-3 px-4">
+                                    <%= rule.creation.getFullYear()+'/'+(rule.creation.getMonth()+1)+'/'+rule.creation.getDate()
+                                        %>
+                                </td>
+                                <td class="w-1/3 text-left py-3 px-4">
+                                    <%= rule.title %>
+                                </td>
+							<td class="w-1/3 text-left py-3 px-4">
+                                    <%= rule.description %>
+                                </td>
+							
+                                
+
+                                <td class="text-left py-3 px-4">
+                                    <% if(rule.path.indexOf("https://")==-1) { %>
+                                        <a class="hover:text-blue-500" href="/regoff/admin/rule/pdf/<%=rule.id%>"
+                                            target="_blank">View</a>
+                                        <% } else { %>
+                                            <a class="hover:text-blue-500" href="<%= rule.path %>"
+                                                target="_blank">View</a>
+                                            <% } %>
+                                </td>
+
+                                <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
+                                        href="/regoff/admin/rule/<%=rule.id%>">Edit</a></td>
+                                <td class="text-left py-3 px-4">
+                                    <form class="mx-2" action="/regoff/admin/rule/<%=rule.id%>?_method=DELETE"
+                                        method="POST"><button class="hover:text-red-500">Delete</button></form>
+                                </td>
+
+                        </tr>
+                        <% })%>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <%- include("../partials/footer.ejs") %>

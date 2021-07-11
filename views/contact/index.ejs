@@ -1,0 +1,85 @@
+<%- include("../partials/header.ejs") %>
+    <h1 class="text-3xl text-black pb-6">Contact Info</h1>
+	<h4 class="text-l text-black pb-6">
+		<span style="color:red"><strong>Important!</strong></span> Add only one record. Write multiple phone numbers or email addresses using comma in the same record.
+	</h4>
+
+    <div class="mt-6">
+        <a class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" href="/regoff/admin/contact/addContactInfo">Add Details</a>
+    </div>
+
+    <div class="w-full mt-6 overflow-auto">
+        <div class="bg-white">
+            <table class="min-w-full leading-normal">
+                <thead class="bg-gray-800 text-white">
+                    <tr>
+						<th class="px-5 py-3 border-b-2 text-left text-sm font-semibold uppercase tracking-wider">
+                            Phone Number</th>
+						<th class="px-5 py-3 border-b-2 text-left text-sm font-semibold uppercase tracking-wider">
+                            Fax</th>
+						<th class="px-5 py-3 border-b-2 text-left text-sm font-semibold uppercase tracking-wider">
+                            Email</th>
+                        <th class="px-5 py-3 border-b-2 text-left text-sm font-semibold uppercase tracking-wider">Edit
+                        </th>
+                        <th class="px-5 py-3 border-b-2 text-left text-sm font-semibold uppercase tracking-wider">Delete
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody class="text-gray-700">
+                    <%contactInfos.forEach((contactInfo,i)=>{ if(i%2){%>
+                        <tr class="bg-gray-200">
+                            <%}else{%>
+                        <tr>
+                            <%}%>
+								<td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+									<p class="text-gray-900 whitespace-no-wrap">
+										<%= contactInfo.phone %>
+									</p>
+								</td>
+								<td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+									<p class="text-gray-900 whitespace-no-wrap">
+										<%= contactInfo.fax %>
+									</p>
+								</td>
+								<td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+									<p class="text-gray-900 whitespace-no-wrap">
+										<%= contactInfo.email %>
+									</p>
+								</td>
+                                <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
+                                        href="/regoff/admin/contact/<%=contactInfo.id%>/updateContactInfo">Edit</a></td>
+                                <td class="text-left py-3 px-4">
+                                    <form class="mx-2" action="/regoff/admin/contact/<%=contactInfo.id%>?_method=DELETE"
+                                        method="POST"><button class="hover:text-red-500">Delete</button></form>
+                                </td>
+                        </tr>
+                        <% })%>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <% if(contactInfos.length!=0){ %>
+        <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
+            onclick="document.getElementById('id01').style.display='block'">Delete All Info</button>
+
+        <div id="id01" class="modal">
+
+            <form action="/regoff/admin/contact/delete/allInfo?_method=DELETE" method="POST" class="modal-content">
+                <div class="container">
+                    <h1>Delete All Info</h1>
+                    <p>Are you sure you want to delete all the info?</p>
+
+                    <div class="clearfix">
+                        <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
+                            onclick="document.getElementById('id01').style.display='none'" type="button">Cancel</button>
+                        <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
+                            type="submit">Delete</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <% } %>
+
+            <%- include("../partials/footer.ejs") %>

@@ -1,0 +1,42 @@
+<section id="home">
+    <div id="home_container" class="px-5 sm:px-12 lg:px-32 py-6 sm:pt-12 sm:pb-16 flex flex-col-reverse sm:flex-row">
+        <div id="home_info" class="w-full sm:w-7/12 my-2 sm:my-0 sm:mx-1 p-4 bg-white rounded"
+            style="box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);">
+            <% aboutInfos.forEach(aboutInfo=>{ %>
+
+            <div class="mb-5">
+                <h2 class="text-xl font-semibold"><%=aboutInfo.title%></h2>
+                <p class="mt-4 text-sm font-normal"><%=aboutInfo.description%>
+                </p>
+            </div>
+            <% }) %>
+        </div>
+        <div id="announcements" class="w-full sm:w-5/12 my-2 sm:my-0 sm:mx-1 p-4 bg-white rounded"
+            style="box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);">
+            <div class="heading pb-4" style="border-bottom: 1px solid #DBDBDB;">
+                <h2 class="text-xl font-semibold">News and Events</h2>
+            </div>
+
+            <div class="old_announce max-h-60 overflow-hidden">
+                <% announcements.forEach((announcement, i)=>{ %>
+                    <p class="py-2 text-sm font-normal" style="border-bottom: 1px solid #DBDBDB;">
+                        <% if(announcement.important){ %>
+                            <span class="text-xs text-white rounded px-1 bg-gray-500"
+                                style="background-color:#E54F6D;">Important</span>
+                            <% } if(i<3){%>
+                                <span class="text-xs text-white rounded px-1 bg-black">New</span>
+                                <%}%>
+                                    <%=announcement.title%>
+                    </p>
+                    <% }) %>
+            </div>
+
+            <div class="footer">
+                <p class="pt-2 text-right"><span
+                        class="text-sm font-normal cursor-pointer text-gray-500 hover:text-black" id="toggle_view">+
+                        See More</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

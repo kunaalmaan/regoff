@@ -1,0 +1,29 @@
+<section class="text-gray-600 body-font md:px-44 md:pt-5">
+    <!-- <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center"> -->
+    <div class="flex justify-center grid grid-cols-3 gap-4">
+        <div class="col-span-3 md:col-span-2 text-base px-5 lg:ml-20" id="cat">
+            <% categories.forEach(category=>{ %>
+                <a class=" px-2 md:px-0 " style="text-decoration: none; color: inherit;"> <button
+                        class="cta act bg-gray-200 border-0 py-1  px-3 md:px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+                        onClick="myFunction2('<%=category.name.toUpperCase()%>')">
+                        <%=category.name.toUpperCase()%>
+                    </button></a>
+                <% }) %>
+
+                    <a class=" px-2 md:px-0 " style="text-decoration: none; color: inherit;"> <button
+                            class="cta act bg-gray-200 border-0 py-1  px-3 md:px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+                            onClick="myFunction2('')">
+                            Clear All
+                            <span class="ml-2"><i class="fas fa-times"></i></span>
+                        </button></a>
+        </div>
+        <div class="col-span-3 md:col-span-1 text-center pt-2 md:pt-0">
+            <form>
+                <input class="mySearch1 border-2 border-gray-300" onkeyup="myFunction1()" class="form-control me-2"
+                    type="search" placeholder="Search" onClick="myFunction2('')">
+                </input>
+            </form>
+        </div>
+
+    </div>
+</section>
