@@ -1,5 +1,6 @@
 const AdminUpload = require("../models/adminUploads");
 const Rule = require("../models/rule");
+const Contact = require("../models/contact");
 
 exports.getrule = async (req, res) => {
   // let registrars = await Registrar.find({}).sort("-creation"); 
@@ -10,10 +11,12 @@ exports.getrule = async (req, res) => {
   });
 
   let rules = await Rule.find({}).sort("-priority");
+  let contactInfos = await Contact.find({});
   
   return res.render("home/rule/rule", {
 	  uploads,
 	  rules,
 	  uploadImages,
+	  contactInfos,
   });
 };
