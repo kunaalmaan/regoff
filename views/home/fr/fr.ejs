@@ -1,0 +1,196 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Former Registrars</title>
+	<link rel="stylesheet" href="/regoff/css/tailwind.min.css" />
+	<link rel="stylesheet" type="text/css" href="/regoff/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+	 <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.cdnfonts.com/css/basier" rel="stylesheet">
+	
+</head>
+
+<body class="overflow-x-hidden">
+  
+	
+	    <div class="header bg-gray-100">
+      <div class="flex justify-center bg-gray-100 pt-1">
+        
+        <div>
+            <span class="float-left ">
+                <a href="https://iitg.ac.in"><img src="https://i.ibb.co/8z2qtGM/1200px-IIT-Guwahati-Logo-1.png" alt="1200px-IIT-Guwahati-Logo-1" border="0"></a>
+              </span>
+              <span class="float-left pl-4 align-center inline-block align-middle h-full py-2">
+              <h1 class="text-sm m-auto align-center text-center leading-normal align-middle">INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI</h1>
+              </span>
+        </div>
+      </div>
+    </div>
+	
+	
+
+<!-- 2 bar-->
+
+
+        <div class="flex  w-full ">
+          <div class="flex flex-grow" id='nav-content' >
+            <div class="hidden flex-grow items-center justify-center text-sm font-mono h-20 px-4 w-50 text-blue-550 bg-accent active-tab">
+              <a href="/regoff" class="text-center font-bold bar2 heads cursor-pointer" style="font-size: 18px;">OFFICE OF REGISTRAR</a>
+            </div>
+            <!-- bg-accent -->
+            <div class="flex px-8 items-center space-x-16 h-20 ">
+              <a class="text-center w-100 bar2 heads text-blue-500 font-bold" style="font-size: 16px;" href="/regoff/fr">Former Registrars</a>
+			  <a class="text-center w-100 bar2 heads hover:text-blue-500" style="font-size: 16px;" href="/regoff/off">Officials</a>
+			  <a class="text-center w-100 bar2 heads hover:text-blue-500" style="font-size: 16px;" href="/regoff/rule">Important Links</a>
+            </div>
+          </div>
+        </div>
+	
+	
+	
+		
+	<section id="registrars">
+  <section class="text-gray-600 body-font ">
+      <div class="container md:px-32 px-5 py-20 mx-auto">
+		  <div class=" text-4xl mb-5">
+			<h1 class="w-13/13 heads text-black font-semibold" >
+				Former Registrars
+			</h1>
+        
+      	  </div>
+          <div class="flex justify-left flex-wrap -m-4">
+              <% registrars.forEach(registrar=>{ %>
+                  <div class="profileCard h-auto m-4 bg-white rounded-md"
+                      style="box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);width: 350px;">
+                      <div class="box-border pointer-events-none  border-white w-full h-48 bg-gray-100 rounded-md" style="height: 310px;">
+                          <img alt="official" class="rounded w-auto h-full md:mr-2 sm:mb-0 mb object-cover object-center"
+                              src="<%=registrar.pic%>" style="object-fit: fill;  display:block; margin-left: auto; margin-right: auto;">
+                      </div>
+                      <div class="box-border px-3 pt-3 pb-2 ">
+                          <div class=" md:bottom-14 bottom-4 md:-right-16 z-10 ">
+							 <div class="flex justify-between">
+								 <div class="my-2  ">
+                              <p class="text-gray-900 text-lg mr-10 title-font font-medium mb-2 font-bold text-left ">
+                                  <%=registrar.name%>
+                              </p>
+								 </div>
+								 <div class="my-2">
+                              <p class="mb-4 text-right">
+                                  <%=registrar.post%>
+                              </p>
+								 </div>
+							  </div>
+							  </div>
+						  <div class="border-t-2"></div>
+						  <div class="md:bottom-14 bottom-4 md:-right-16 z-10 flex">
+							  <p class="mb-4 ttttttttxxxxxxxxeeeeeeee">
+                                  <%=registrar.date%>
+                              </p>
+                          </div>
+                          <!-- <p class="pt-0.5 pb-1 text-sm font-normal text-gray-600">twitter_handle</p> -->
+                      </div>
+                  </div>
+                  <% }) %>
+          </div>
+      </div>
+  </section>
+</section>
+
+		
+<footer class="text-gray-600 body-font bg-gray-200">
+    <div class="container px-5 pt-8 pb-3 sm:py-10 mx-auto flex items-center sm:flex-row flex-col">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+            href="https://www.facebook.com/swciitg" target="_blank">
+            <!-- <img src="images/nav/hab_logo.svg" alt="hab-logo" class="transform scale-50"> -->
+            <img src="/regoff/images/svg/swc-logo.svg" alt="swc-logo" class="mr-3 transform scale-110">
+            <span class="text-xl">Students' Web Committee</span>
+        </a>
+        <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-400 sm:py-2 sm:mt-0 mt-4">©
+            2021
+            SWC —
+            <a href="https://www.facebook.com/swciitg" class="text-gray-600 ml-1" rel="noopener noreferrer"
+                target="_blank">@swciitg</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                    </path>
+                </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-5 h-5" viewBox="0 0 24 24">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                    </path>
+                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                </svg>
+            </a>
+        </span>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+
+<script>
+    $(document).ready(function(){
+      $('#nav-content').prepend($('.active-tab'));
+    })
+    
+  </script>
+<script>
+    const smallnav = document.querySelector("#smallnav");
+    const menu = document.querySelector("#menu");
+
+    smallnav.addEventListener('click', ()=>{
+      if(menu.classList.contains('hidden')){
+          menu.classList.remove('hidden');
+      }else{
+          menu.classList.add('hidden');
+      }
+    })
+  </script>
+
+<script>
+  document.addEventListener("scroll", function () {
+    const navbar = document.querySelector("#shownav");
+    const navbarHeight = 100;
+
+    const distanceFromTop = Math.abs(
+      document.body.getBoundingClientRect().top
+    );
+
+    if (distanceFromTop > navbarHeight+460){
+		navbar.classList.remove("invisible");
+		//navbar.classList.add("transition-property: all transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) transition-duration: 150ms");
+	}
+    else navbar.classList.add("invisible");
+  });
+</script>
+
+
+
+</html>

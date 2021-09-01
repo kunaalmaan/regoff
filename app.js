@@ -39,6 +39,9 @@ const galleryRoutes = require("./routes/gallery.routes");
 const adminUploadRoutes = require("./routes/adminUploads.routes");
 const contactRoutes = require("./routes/contact.routes");
 const aboutRoutes = require("./routes/about.routes");
+const front_frRoutes = require("./routes/front_fr.routes");
+const front_offRoutes = require("./routes/front_off.routes");
+const front_ruleRoutes = require("./routes/front_rule.routes");
 
 app.use("/regoff/", express.static(__dirname + "/public"));
 app.use("/regoff/uploads", express.static(__dirname + "/uploads"));
@@ -85,6 +88,9 @@ app.set("view engine", "ejs");
 //app.get("/", (req, res) => res.redirect("/regoff"));
 
 app.use("/regoff", userRoutes);
+app.use("/regoff/fr", front_frRoutes);
+app.use("/regoff/off", front_offRoutes);
+app.use("/regoff/rule", front_ruleRoutes);
 app.use("/regoff/admin", adminRoutes);
 app.use("/regoff/admin/rule", ruleRoutes);
 //app.use("/regoff/admin/functionary", functionaryRoutes);

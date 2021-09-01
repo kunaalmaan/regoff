@@ -17,15 +17,15 @@
 
 <body class="overflow-x-hidden">
   <!-- <div class="min-h-screen"> -->
-    <div class="header bg-white py-1">
-      <div class="container flex justify-center mb-1.5 mt-0.5 ml-auto mr-auto">
+    <div class="header bg-gray-100">
+      <div class="flex justify-center bg-gray-100 pt-1">
         
         <div>
             <span class="float-left ">
-                <img src="https://i.ibb.co/8z2qtGM/1200px-IIT-Guwahati-Logo-1.png" alt="1200px-IIT-Guwahati-Logo-1" border="0">
+                <a href="https://iitg.ac.in"><img src="https://i.ibb.co/8z2qtGM/1200px-IIT-Guwahati-Logo-1.png" alt="1200px-IIT-Guwahati-Logo-1" border="0"></a>
               </span>
-              <span class="float-left pl-4">
-              <h1 class="text-xs pt-2.5">INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI</h1>
+              <span class="float-left pl-4 align-center inline-block align-middle h-full py-2">
+              <h1 class="text-sm m-auto align-center text-center leading-normal align-middle">INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI</h1>
               </span>
         </div>
       </div>
@@ -35,31 +35,25 @@
 
 <!-- 2 bar-->
 
-      <div class="flex justify-center mb-1.5 mt-0.5 ml-auto mr-auto">
-        <div class="flex md:justify-between w-full mt-2">
-          <div class="flex flex-grow justify-between" id='nav-content' >
-            <div class="hidden flex-grow md:flex items-center justify-center text-sm font-mono h-20 px-2 text-blue-550 bg-accent active-tab">
-              <p class="text-center bar2 heads" style="font-size: 18px;">OFFICE OF REGISTRAR</p>
+
+        <div class="flex  w-full ">
+          <div class="flex flex-grow" id='nav-content' >
+            <div class="hidden flex-grow items-center justify-center text-sm font-mono h-20 px-4 w-50 text-blue-550 bg-accent active-tab">
+              <a href="/regoff" class="text-center font-bold bar2 heads cursor-pointer" style="font-size: 18px;">OFFICE OF REGISTRAR</a>
             </div>
-            
-            <div class="flex px-8 items-center space-x-8 h-20 bg-accent">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M2 10.6699C2 5.88166 5.84034 2 10.5776 2C12.8526 2 15.0343 2.91344 16.6429 4.53936C18.2516 6.16529 19.1553 8.37052 19.1553 10.6699C19.1553 15.4582 15.3149 19.3399 10.5776 19.3399C5.84034 19.3399 2 15.4582 2 10.6699ZM19.0134 17.6543L21.568 19.7164H21.6124C22.1292 20.2388 22.1292 21.0858 21.6124 21.6082C21.0955 22.1306 20.2576 22.1306 19.7407 21.6082L17.6207 19.1785C17.4203 18.9766 17.3076 18.7024 17.3076 18.4164C17.3076 18.1304 17.4203 17.8562 17.6207 17.6543C18.0072 17.2704 18.6268 17.2704 19.0134 17.6543Z" fill="white"/>
-              </svg>
-              <a href="#" id="smallnav"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 20H28V17.3334H4V20ZM4 25.3334H28V22.6667H4V25.3334ZM4 14.6667H28V12H4V14.6667ZM4 6.66669V9.33335H28V6.66669H4Z" fill="white"/>
-                </svg>
-              </a>
+            <!-- bg-accent -->
+            <div class="flex px-8 items-center space-x-16 h-20 ">
+              <a class="text-center w-100 bar2 heads hover:text-blue-500" style="font-size: 16px;" href="/regoff/fr">Former Registrars</a>
+			  <a class="text-center w-100 bar2 heads hover:text-blue-500" style="font-size: 16px;" href="/regoff/off">Officials</a>
+			  <a class="text-center w-100 bar2 heads hover:text-blue-500" style="font-size: 16px;" href="/regoff/rule">Important Links</a>
             </div>
           </div>
         </div>
-      </div>
-
 
 	
 	
 <!-- 3rd carusel -->
-<div class="container mx-auto" style="width:100%;" >
+<div class=" mx-auto" style="width:100%;" >
 	<% galleries.forEach(gallery=>{ %>
 <div class="slideshow-container">
 	
@@ -68,7 +62,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="transition duration-500 ease-in-out hover:bg-gray-300 transform hover:scale-110 inline-block prev h-20 w-20" onclick="plusSlides(-1)" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="position: absolute;">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 	  </svg>
-	  <img class="object-cover h-96 w-full " src="<%=gallery.pic%>">
+	  <img class="object-cover h-4/6 w-full " src="<%=gallery.pic%>">
 	  
 	
 <svg xmlns="http://www.w3.org/2000/svg" class="transition duration-500 ease-in-out hover:bg-gray-300 transform hover:scale-110 inline-block next h-20 w-20" onclick="plusSlides(1)" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="position: absolute;">
@@ -94,10 +88,10 @@
 </div>
 <!-- carousel ends -->
 	
-   
+
       <!--registrar para-->
-<div class="flex sm:w-full">
-  <div class="container lg:flex justify-left mb-5 mt-5 ml-auto" style="margin: 100px; max-width:753px;" id="theregistrar">
+<div class="w-full">
+  <div class="lg:flex mb-5 mt-5 ml-auto space-x-4 space-y-4" style="margin: 100px;" id="theregistrar">
     <div class="Paragraphs lg:w-11/12">
       <div class=" text-4xl mb-5">
         <h1 class="w-13/13 heads text-black font-semibold" >
@@ -118,251 +112,42 @@
         </p>
       </div>
     </div>
+	  
+	  	<% curr_regs.forEach(curr_reg=>{ %>
+	<div class="bcard mt-24 w-full" id="maincard">
+		<div class="section1" id="sec1">
+			<div class="title">
+				<span style ="font-family: Red Hat Display; font-size: 14px;line-height: 19px;letter-spacing: 0.08em;color: #BCBCF9;">
+					<%=curr_reg.date%>
+				</span> <br>
+				<span style ="font-weight: 600; font-family: Basier Circle; font-size: 34px;line-height: 44px;letter-spacing: 0.0038em;color: #FFFFFF;">
+					<%=curr_reg.name%>
+				</span>
+			</div>
+			<div class="photo">
+				<img class="rounded" src="<%=curr_reg.pic%>" style="display:block;width:292px;height:auto">
+			</div>
+		</div>
+		<div class="section2" style="max-width:400px;" id="sec2">
+			<span id="blue-text"><%=curr_reg.description%></span>
+			<br><br>
+			<span id="blue-text">Phone: <%=curr_reg.phone%></span>
+			<br>
+			<span id="blue-text">Email: <%=curr_reg.email%></span>
+			<br>
+			<br>
+		</div>
+	</div>
+	<% }) %>
   </div>
+	
 
-  <!--nav-->
-  <div class="lg:mt-20 mr-40">
-    <nav class="container navbar lg:border-l-2 w-max mr-auto" id="navbar">
-      <div class="lg:flex items-center justify-between sm:hidden">
-        <div class="px-1 ml-4">
-          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6939 13.4799H7.27887C6.96837 13.4799 6.71637 13.2279 6.71637 12.9174C6.71637 12.6069 6.96837 12.3549 7.27887 12.3549H12.6939C13.0044 12.3549 13.2564 12.6069 13.2564 12.9174C13.2564 13.2279 13.0044 13.4799 12.6939 13.4799Z" fill="#9FABB7"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6939 10.34H7.27887C6.96837 10.34 6.71637 10.088 6.71637 9.77747C6.71637 9.46697 6.96837 9.21497 7.27887 9.21497H12.6939C13.0044 9.21497 13.2564 9.46697 13.2564 9.77747C13.2564 10.088 13.0044 10.34 12.6939 10.34Z" fill="#9FABB7"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.34485 7.20746H7.2786C6.96809 7.20746 6.71609 6.95546 6.71609 6.64496C6.71609 6.33446 6.96809 6.08246 7.2786 6.08246H9.34485C9.65535 6.08246 9.90735 6.33446 9.90735 6.64496C9.90735 6.95546 9.65535 7.20746 9.34485 7.20746Z" fill="#9FABB7"/>
-            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="2" width="14" height="16">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15698 2.24976H16.7805V17.1821H3.15698V2.24976Z" fill="white"/>
-            </mask>
-            <g mask="url(#mask0)">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8385 3.37463L7.0718 3.37763C5.3258 3.38813 4.2818 4.46813 4.2818 6.26738V13.1644C4.2818 14.9756 5.33555 16.0571 7.0988 16.0571L12.8655 16.0549C14.6115 16.0444 15.6555 14.9629 15.6555 13.1644V6.26738C15.6555 4.45613 14.6025 3.37463 12.8385 3.37463ZM7.09955 17.1821C4.74155 17.1821 3.1568 15.5674 3.1568 13.1644V6.26738C3.1568 3.84263 4.69205 2.26688 7.06805 2.25263L12.8378 2.24963H12.8385C15.1965 2.24963 16.7806 3.86438 16.7806 6.26738V13.1644C16.7806 15.5884 15.2453 17.1649 12.8693 17.1799L7.09955 17.1821Z" fill="#9FABB7"/>
-            </g>
-            </svg>            
-        </div>
-        <div class="font-bold uppercase" style="color: #9FABB7;">
-          <span>contents</span>
-        </div>
-      </div>
-      <ul class="lg:mt-6 hidden lg:block ml-6 sm:h-auto sm:overflow-visible" style="color: #636870;" id="menu">
-        <li class="py-1 flex">
-          <a href="#theregistrar" class="flex justify-end font-bold">
-            <span>The Registrar</span>
-          </a>
-        </li>
-        <!-- <li class="py-1 flex">
-          <a href="#maincard">
-            <span>Present Registrar</span>
-          </a>
-        </li> -->
-        <li class="py-1 flex">
-          <a href="#registrars"> 
-            <span>Former Registrars</span>
-          </a>
-        </li>
-		<li class="py-1 flex">
-          <a href="#officials"> 
-            <span>Officials</span>
-          </a>
-        </li>
-        <li class="py-1 flex">
-          <a href="#rules"> 
-            <span>Rules</span>
-          </a>
-        </li>
-        
-      </ul>
-    </nav> 
-  </div>
+  
 </div>
 
 <!-- <div class="container md:px-32 px-5 py-20 mx-auto"> -->
-<% curr_regs.forEach(curr_reg=>{ %>
-<div class="bcard" id="maincard">
-    <div class="section1" id="sec1">
-        <div class="title">
-            <span style ="font-family: Red Hat Display; font-size: 14px;line-height: 19px;letter-spacing: 0.08em;color: #BCBCF9;">
-                <%=curr_reg.date%>
-            </span> <br>
-            <span style ="font-weight: 600; font-family: Basier Circle; font-size: 34px;line-height: 44px;letter-spacing: 0.0038em;color: #FFFFFF;">
-                <%=curr_reg.name%>
-            </span>
-        </div>
-        <div class="photo">
-            <img class="rounded" src="<%=curr_reg.pic%>" style="display:block;width:292px;height:auto">
-        </div>
-    </div>
-    <div class="section2" style="max-width:400px;" id="sec2">
-        <span id="blue-text"><%=curr_reg.description%></span>
-        <br><br>
-        <span id="blue-text">Phone: <%=curr_reg.phone%></span>
-		<br>
-        <span id="blue-text">Email: <%=curr_reg.email%></span>
-        <br>
-        <br>
-    </div>
-</div>
-<% }) %>
-	
 
 	
-	<section id="registrars">
-  <section class="text-gray-600 body-font ">
-      <div class="container md:px-32 px-5 py-20 mx-auto">
-		  <div class=" text-4xl mb-5">
-			<h1 class="w-13/13 heads text-black font-semibold" >
-				Former Registrars
-			</h1>
-        
-      	  </div>
-          <div class="flex justify-left flex-wrap -m-4">
-              <% registrars.forEach(registrar=>{ %>
-                  <div class="profileCard h-auto m-4 bg-white rounded-md"
-                      style="box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);width: 350px;">
-                      <div class="box-border pointer-events-none  border-white w-full h-48 bg-gray-100 rounded-md" style="height: 310px;">
-                          <img alt="official" class="rounded w-auto h-full md:mr-2 sm:mb-0 mb object-cover object-center"
-                              src="<%=registrar.pic%>" style="object-fit: fill;  display:block; margin-left: auto; margin-right: auto;">
-                      </div>
-                      <div class="box-border px-3 pt-3 pb-2 ">
-                          <div class=" md:bottom-14 bottom-4 md:-right-16 z-10 ">
-							 <div class="flex justify-between">
-								 <div class="my-2  ">
-                              <p class="text-gray-900 text-lg mr-10 title-font font-medium mb-2 font-bold text-left ">
-                                  <%=registrar.name%>
-                              </p>
-								 </div>
-								 <div class="my-2">
-                              <p class="mb-4 text-right">
-                                  <%=registrar.post%>
-                              </p>
-								 </div>
-							  </div>
-							  </div>
-						  <div class="border-t-2"></div>
-						  <div class="md:bottom-14 bottom-4 md:-right-16 z-10 flex">
-							  <p class="mb-4 ttttttttxxxxxxxxeeeeeeee">
-                                  <%=registrar.date%>
-                              </p>
-                          </div>
-                          <!-- <p class="pt-0.5 pb-1 text-sm font-normal text-gray-600">twitter_handle</p> -->
-                      </div>
-                  </div>
-                  <% }) %>
-          </div>
-      </div>
-  </section>
-</section>
-
-	
-	
-	
-	
-<!--officials-->
-<section id="officials">
-    <section class="text-gray-600 body-font ">
-        <div class="container md:px-32 px-5 py-20 mx-auto">
-            <div class=" text-4xl mb-5">
-              <h1 class="w-13/13 heads text-black font-semibold" >
-                  Officials
-              </h1>
-          
-              </div>
-            <div class="flex justify-left flex-wrap -m-4">
-                <% officials.forEach(official=>{ %>
-                    <div class="profileCard h-auto m-4 bg-white rounded-md"
-                        style="box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);width: 350px; height: 450px; background: #3B3B98; ">
-                        <div class="box-border pointer-events-none  border-white w-full h-48 bg-gray-100 rounded-md" style="height: 310px;">
-                            <img alt="official" class="rounded w-auto h-full md:mr-2 sm:mb-0 mb object-cover object-center"
-                                src="<%=official.pic%>" style="object-fit: fill;  display:block; margin-left: auto; margin-right: auto;">
-                        </div>
-                        <div class="box-border px-3 item-center">
-                            <div class=" md:bottom-14 bottom-2 md:-right-16 z-10 ">
-                               <div class="flex justify-between">
-                                   <div class="my-2  ">
-                                <p class="text-white text-lg mr-10 title-font font-medium mb-0 font-bold text-left">
-                                    <%=official.name%>
-                                </p>
-                                   </div>
-                                   <div class="my-2">
-                                <p class="mb-0 text-right text-white">
-                                    <%=official.post%>
-                                </p>
-                                   </div>
-                                </div>
-                                </div>
-                            <div class="border-t-2"></div>
-                            <div class="mt-3 md:-right-16 flex justify-between">
-                                <p class="text-white">
-                                    <%=official.email%>
-                            	</p>
-                                    
-                                <p class=" text-white ml-5 text-right">
-                                    <%=official.phone%>
-                                </p>
-                            </div>
-                            <!-- <p class="pt-0.5 pb-1 text-sm font-normal text-gray-600">twitter_handle</p> -->
-                        </div>
-                    </div>
-                    <% }) %>
-            </div>
-        </div>
-    </section>
-  </section>
-
-
-
-
-<!--rules and important links-->
-<div class="container md:px-32 px-0 py-20 mx-auto" id="rules">
-  <h3 class="text-black text-4xl mb-10 text-sm heads font-semibold">
-    Rules and Important Links
-  </h3>
-	<% rules.forEach(rule=>{ %>
-  <div class="mt-4 bg-white p-5 rounded-lg shadow-lg lg:mr-80 border sm:mr-auto">
-    <div>
-	
-      <div>
-		<div>
-			<h2 class="text-2xl font-bold mb-2 text-gray-800"><%=rule.title%></h2>
-			<div>
-				<p class="text-xs text-gray-700 mt-1 mb-2 mr-56">
-				  <%=rule.description%>
-				</p>
-				<p class="text-xs text-gray-700 mt-1 mb-2 mr-56">
-				  <%=rule.link%>
-				</p>
-			</div>
-			<div>
-				<a href="<%=rule.link%>">
-				  <%=rule.link%>
-				</a>
-			</div>
-		</div>
-        <div class=" md:bottom-0 bottom-0 md:-right-16">
-          <div class="flex justify-between">
-            <div class="my-0">
-				 <p class="text-gray-700 mb-0 text-left ">
-					 <%= rule.creation.getDate()+' '+(["January", "February", "March", "April", 
-							"May", "June","July", "August", "September", "October", "November", 
-							"December"][rule.creation.getMonth()])+", "+rule.creation.getFullYear()%>
-				 </p>
-            </div>
-            <div class="my-0">
-                         <p class="mb-0 text-right">
-							 <a href="uploads/rule_pdf/<%=rule.path%>">
-                          <svg class="" width="25" height="25" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.9399 30.0015H11.0466C6.3399 30.0015 3.16656 26.9735 3.16656 22.4548V10.8948C3.16656 6.37484 6.3399 3.33484 11.0466 3.33484H21.9399C26.6599 3.33484 29.8332 6.37484 29.8332 10.8948V22.4548C29.8332 26.9735 26.6599 30.0015 21.9399 30.0015ZM19.5265 15.6682H11.0599C10.4999 15.6682 10.0599 16.1215 10.0599 16.6682C10.0599 17.2282 10.4999 17.6682 11.0599 17.6682H19.5265L16.2199 20.9615C16.0332 21.1482 15.9265 21.4148 15.9265 21.6682C15.9265 21.9202 16.0332 22.1748 16.2199 22.3748C16.6065 22.7615 17.2465 22.7615 17.6332 22.3748L22.6599 17.3748C23.0332 17.0015 23.0332 16.3348 22.6599 15.9615L17.6332 10.9615C17.2465 10.5748 16.6065 10.5748 16.2199 10.9615C15.8332 11.3615 15.8332 11.9882 16.2199 12.3882L19.5265 15.6682Z" fill="#A5ADBC"/>
-                            </svg>
-							 </a>
-                         </p>
-            </div>
-          </div>
-        </div>
-      </div>
-	
-    </div>
-  </div>
-	<% }) %>
-</div>
-	
-
 
 
 
@@ -462,15 +247,18 @@
 
 <script>
   document.addEventListener("scroll", function () {
-    const navbar = document.querySelector("#navbar");
+    const navbar = document.querySelector("#shownav");
     const navbarHeight = 100;
 
     const distanceFromTop = Math.abs(
       document.body.getBoundingClientRect().top
     );
 
-    if (distanceFromTop > navbarHeight+460) navbar.classList.add("fixed-top");
-    else navbar.classList.remove("fixed-top");
+    if (distanceFromTop > navbarHeight+460){
+		navbar.classList.remove("invisible");
+		//navbar.classList.add("transition-property: all transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) transition-duration: 150ms");
+	}
+    else navbar.classList.add("invisible");
   });
 </script>
 
@@ -505,35 +293,6 @@ function showSlides(n) {
 }
 </script>
 
-<!-- 3rd carousel ends -->
 
-<!-- 2nd carousel -->
-<!-- <script>
-const carouselSlide = document.querySelector('.carousel-slide');
-const carouselImages = document.querySelectorAll('.carousel-slide img');
-
-
-const prevBtn = document.querySelector('#prevBtn');
-const nextBtn = document.querySelector('#nextBtn');
-
-
-let counter = 1;
-let N       = 5;
-const size = carouselImages[0].clientWidth;
-
-carouselSlide.style.transform = 'translateX(' + (-carouselImages[0].clientWidth * counter) + 'px)';
-
-var interval = 3000;
-setInterval(function() {
-    
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    carouselSlide.style.transform = 'translateX(' + (-carouselImages[0].clientWidth * counter) + 'px)';
-    counter=(counter+1)%N;
-
-
-    // if (offset == 0) counter = 1; // to reset counter so next and prev button should work 
-
-}, interval);
-</script> -->
 
 </html>
