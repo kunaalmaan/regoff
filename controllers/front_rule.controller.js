@@ -10,7 +10,7 @@ exports.getrule = async (req, res) => {
     uploadImages.push(`uploads/adminUploads/${upload.image}`);
   });
 
-  let rules = await Rule.find({}).sort("-priority");
+  let rules = await Rule.find({}).sort("-creation");
   let contactInfos = await Contact.find({});
   
   return res.render("home/rule/rule", {

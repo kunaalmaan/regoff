@@ -10,7 +10,7 @@ exports.getoff = async (req, res) => {
     uploadImages.push(`uploads/adminUploads/${upload.image}`);
   });
 
-  let officials = await Official.find({}).sort("-priority");
+  let officials = await Official.find({}).sort("priority_number");
   let contactInfos = await Contact.find({});
   
   return res.render("home/off/off", {

@@ -10,7 +10,7 @@ exports.getfr = async (req, res) => {
     uploadImages.push(`uploads/adminUploads/${upload.image}`);
   });
 
-  let registrars = await Registrar.find({}).sort("-priority");
+  let registrars = await Registrar.find({}).sort("priority_number");
   let contactInfos = await Contact.find({});
   
   return res.render("home/fr/fr", {

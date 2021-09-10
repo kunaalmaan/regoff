@@ -17,13 +17,14 @@ exports.getHome = async (req, res) => {
     uploadImages.push(`uploads/adminUploads/${upload.image}`);
   });
 
-  let officials = await Official.find({}).sort("-priority");
-  let registrars = await Registrar.find({}).sort("-priority");
+  //let officials = await Official.find({}).sort("-priority");
+	let officials = await Official.find({}).sort("priority_number");
+  let registrars = await Registrar.find({}).sort("priority_number");
 	let curr_regs = await Curr_reg.find({}).sort("-priority");
 	let galleries = await Gallery.find({}).sort("-priority");
 	let contactInfos = await Contact.find({});
   
-  return res.render("home/index", {
+  return res.render("home", {
 	  uploads,
 	  officials,
 	  registrars,
